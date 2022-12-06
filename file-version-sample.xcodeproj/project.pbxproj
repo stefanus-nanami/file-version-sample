@@ -41,7 +41,7 @@
 		C762BFDF293E602A0087B905 = {
 			isa = PBXGroup;
 			children = (
-				C762BFEA293E602B0087B905 /* file-version-sample */,
+				C762BFEB293E602B0087B905 /* main.swift */,
 				C762BFE9293E602B0087B905 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +52,6 @@
 				C762BFE8293E602B0087B905 /* file-version-sample */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C762BFEA293E602B0087B905 /* file-version-sample */ = {
-			isa = PBXGroup;
-			children = (
-				C762BFEB293E602B0087B905 /* main.swift */,
-			);
-			path = "file-version-sample";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +236,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7A2RGNMBL;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -255,7 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q7A2RGNMBL;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

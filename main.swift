@@ -13,6 +13,16 @@ let path = FileManager.default.currentDirectoryPath.appending("/test.dat")
 let url = URL(filePath: path)
 var error: NSError?
 
+func randomData() -> [UInt8]
+{
+  var result = Array<UInt8>()
+  for _ in 1...8 {
+    let vv = UInt8.random(in: 0...255)
+    result.append(vv)
+  }
+  return result
+}
+
 func print(fileVersion: NSFileVersion)
 {
   print("Version info:")
@@ -51,10 +61,10 @@ func writeTo(url: URL)
       print("File exist at \(url)")
       print(fileVersion: fileVersion!)
 
-      let data: [UInt8] = [0xa, 0xb, 0xc, 0xd, 0xe, 0xf, 0x0, 0x1]
+      let data = randomData()
       try write(data: data, toPath: urlPath)
 
-      // Create file version.
+      // Create new file version.
       try createVersionFor(url: url)
     } else {
       if FileManager.default.fileExists(atPath: urlPath) == false {
@@ -62,7 +72,7 @@ func writeTo(url: URL)
         print("File created at \(url)")
       }
 
-      let data: [UInt8] = [0, 1, 2, 3, 4, 5, 6, 7]
+      let data = randomData()
       try write(data: data, toPath: urlPath)
 
       // Create file version.
